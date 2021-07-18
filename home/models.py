@@ -10,16 +10,26 @@ from wagtail.search import index
 
 
 class HomePage(Page):
-    slogan = models.CharField(blank=True, max_length=250)
     body = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel('slogan'),
+        InlinePanel('hero_images', label='Hero Images'),
         FieldPanel('body', classname="full"),
 
     ]
 
 
+class HeroGalleryImage(Orderable):
+    page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='hero_images')
+    hero_image = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    hero_slogan = models.CharField(blank=True, max_length=250)
+
+    panels = [
+        ImageChooserPanel('hero_image'),
+        FieldPanel('hero_slogan'),
+    ]
 
 
 # Keep the definition of BlogIndexPage, and add:
