@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -16,7 +17,16 @@
 <!-- Welcome Slider-->
 <section class="hero-area" style='background-image: url("https://dev.jugendfeuerwehr-waldkirch.de")' style="vertical-align: bottom;">
 
-	<img class="d-none" src="https://dev.jugendfeuerwehr-waldkirch.de" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/dev.jugendfeuerwehr-waldkirch.de\/images\/hero\/team.jpg)'"/>
+    {% for item in page.hero_images.all %}
+        {{  item.image.url  }}
+
+
+
+            {% image item.hero_image scale-100 %}
+
+
+		   {% endfor %}
+	<!--<img class="d-none" src="https://dev.jugendfeuerwehr-waldkirch.de" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/dev.jugendfeuerwehr-waldkirch.de\/images\/hero\/team.jpg)'"/>-->
 
 
 <div class="block">
