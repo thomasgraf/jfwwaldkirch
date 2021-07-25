@@ -59,10 +59,30 @@
           <li class="list-inline-item"><a href="/author/john-doe/">John Doe</a></li>
           <li class="list-inline-item">Wednesday, Sep 12, 2018</li>
         </ul>
-		  {% for item in page.slider_images.all %}
-		  	{% image item.image fill-730x550  %}
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+      {% for item in page.slider_images.all %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+		  	{% image item.image fill-730x550 class="d-block w-100" %}
+          </div>
 
 		   {% endfor %}
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+		 <!-- {% for item in page.slider_images.all %}
+		  	{% image item.image fill-730x550  %}
+
+		   {% endfor %}-->
       </div>
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content">
@@ -73,7 +93,7 @@
 
 
 
-<div class="social-share pt-4">
+<!--<div class="social-share pt-4">
 	<h4>:</h4>
 
 	<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fdev.jugendfeuerwehr-waldkirch.de%2ffahrzeug%2f" target="_blank"
@@ -166,7 +186,7 @@
 		</div>
 	</a>
 
-</div>
+</div>-->
 
 
         <div class="mt-5">

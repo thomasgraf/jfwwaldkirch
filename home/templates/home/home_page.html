@@ -17,24 +17,30 @@
 <!-- Welcome Slider-->
 <section class="hero-area" style='background-image: url("https://dev.jugendfeuerwehr-waldkirch.de")' style="vertical-align: bottom;">
 
-    {% for item in page.hero_images.all %}
-        {{  item.image.url  }}
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+      {% for item in page.hero_images.all %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
 
 
 
-            {% image item.hero_image scale-100 %}
 
+
+
+		  	{% image item.hero_image scale-100 class="d-block w-100" %}
+
+          <h1>{{ item.hero_slogan }}</h1>
+          </div>
 
 		   {% endfor %}
+
+  </div>
+
 	<!--<img class="d-none" src="https://dev.jugendfeuerwehr-waldkirch.de" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/dev.jugendfeuerwehr-waldkirch.de\/images\/hero\/team.jpg)'"/>-->
 
 
-<div class="block">
 
-		<h1>{{ page.slogan }}</h1>
-		<p></p>
-
-	</div>
 </section>
 <!-- /Welcome Slider-->
 

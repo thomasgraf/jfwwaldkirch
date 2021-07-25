@@ -19,28 +19,28 @@
 
         {# Global stylesheets #}
 
-        	<link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/plugins/bootstrap/bootstrap.min.css">
+        	<link rel="stylesheet" href="{% static "bootstrap/bootstrap.min.css" %}">
 
-	<link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="{% static "themify-icons/themify-icons.css" %}">
 
-	<link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="{% static "magnific-popup/magnific-popup.css" %}">
 
-	<link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/plugins/slick/slick.css">
+	<link rel="stylesheet" href="{% static "slick/slick.css" %}">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
 
 
 	<!-- Main Stylesheet -->
 
-	<link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/css/style.min.css" media="screen">
+	<link rel="stylesheet" href="{% static "css/style.css" %}" media="screen">
 
 	<!-- Custom stylesheet - for your changes -->
 
-  <link rel="stylesheet" href="https://dev.jugendfeuerwehr-waldkirch.de/css/custom.min.css" media="screen">
+  <link rel="stylesheet" href="{% static "css/custom.min.css" %}" media="screen">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="https://dev.jugendfeuerwehr-waldkirch.de/images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="https://dev.jugendfeuerwehr-waldkirch.de/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
+	<link rel="icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
 
 
         <link rel="stylesheet" type="text/css" href="{% static 'css/jfwsite.css' %}">
@@ -83,7 +83,7 @@
 				<!-- copyright -->
 				<div class="copyright text-center">
 					<a href="https://dev.jugendfeuerwehr-waldkirch.de/">
-						<img src="https://dev.jugendfeuerwehr-waldkirch.de/images/logo.svg" alt="Meghna" height="42" />
+						<img src="{% static "images/logo.svg" %}" alt="Meghna" height="42" />
 					</a>
 					<br>
 					<p></p>
@@ -97,19 +97,19 @@
         <script type="text/javascript" src="{% static 'js/jfwsite.js' %}"></script>
         <!-- JS Plugins -->
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/jquery/jquery.min.js"></script>
+<script src="{% static "jquery/jquery.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="{% static "bootstrap/bootstrap.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/slick/slick.min.js"></script>
+<script src="{% static "slick/slick.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/shuffle/shuffle.min.js"></script>
+<script src="{% static "shuffle/shuffle.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="{% static "magnific-popup/jquery.magnific-popup.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/lazy-load/lozad.min.js"></script>
+<script src="{% static "lazy-load/lozad.min.js" %}"></script>
 
-<script src="https://dev.jugendfeuerwehr-waldkirch.de/plugins/google-map/map.js"></script>
+<script src="{% static "google-map/map.js" %}"></script>
 
 
 <!-- Main Script -->
